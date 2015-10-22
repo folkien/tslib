@@ -47,17 +47,16 @@ pressure_read(struct tslib_module_info *info, struct ts_sample *input_samples, i
 
 		for (current_sample = input_samples, i = 0; i < samples_count; i++, current_sample++) {
             // for pressure lower than threshold we don't accept data i drop it.
-			if (s->pressure < p->threshold) {
+			if ((current_sample->pressure != 0) && (current_sample->pressure < p->threshold)) {
 				int left = samples_count - nr - 1;
 				if (left > 0) {
 					memmove(current_sample, current_sample + 1, left * sizeof(struct ts_sample));
 					current_sample--;
 					continue;
-				break;
+				    break;
 				}
-			} else {
+            }
             // for pressure higher than threshold we accept the data
-			}
 			nr++;
 		}
 		return nr;
