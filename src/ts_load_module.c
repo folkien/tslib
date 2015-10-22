@@ -36,7 +36,7 @@ static const struct {
 #endif
 #ifdef TSLIB_STATIC_CORGI_MODULE
 	{ "corgi", corgi_mod_init },
-#endif 
+#endif
 #ifdef TSLIB_CY8MRLN_PALMPRE_MODULE
         { "cy8mrln_palmpre", cy8mrln_palmpre_mod_init },
 #endif
@@ -52,7 +52,7 @@ static const struct {
 #ifdef TSLIB_STATIC_GALAX_MODULE
 	{ "galax", galax_mod_init },
 #endif
-#ifdef TSLIB_STATIC_LINEAR_MODULE 
+#ifdef TSLIB_STATIC_LINEAR_MODULE
 	{ "linear", linear_mod_init },
 #endif
 #ifdef TSLIB_STATIC_LINEAR_H2200_MODULE
@@ -63,6 +63,9 @@ static const struct {
 #endif
 #ifdef TSLIB_STATIC_PTHRES_MODULE
 	{ "pthres", pthres_mod_init },
+#endif
+#ifdef TSLIB_STATIC_PRESSURE_MODULE
+	{ "pressure", pressure_mod_init },
 #endif
 #ifdef TSLIB_STATIC_TATUNG_MODULE
 	{ "tatung", tatung_mod_init },

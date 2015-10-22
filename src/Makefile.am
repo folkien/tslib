@@ -39,6 +39,10 @@ if ENABLE_STATIC_PTHRES_MODULE
 libts_la_SOURCES += $(top_srcdir)/plugins/pthres.c
 endif
 
+if ENABLE_STATIC_PRESSURE_MODULE
+libts_la_SOURCES += $(top_srcdir)/plugins/pressure.c
+endif
+
 if ENABLE_STATIC_UCB1X00_MODULE
 libts_la_SOURCES += $(top_srcdir)/plugins/ucb1x00-raw.c
 endif
