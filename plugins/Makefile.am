@@ -163,6 +163,10 @@ pthres_la_SOURCES	= pthres.c
 pthres_la_LDFLAGS	= -module $(LTVSN)
 pthres_la_LIBADD	= $(top_builddir)/src/libts.la
 
+pressure_la_SOURCES	= pressure.c
+pressure_la_LDFLAGS	= -module $(LTVSN)
+pressure_la_LIBADD	= $(top_builddir)/src/libts.la
+
 # hw access
 corgi_la_SOURCES	= corgi-raw.c
 corgi_la_LDFLAGS	= -module $(LTVSN)
