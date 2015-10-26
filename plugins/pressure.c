@@ -29,8 +29,7 @@ struct tslib_pressure {
 	unsigned int	threshold;
 };
 
-// function return number of samples that are in read buffer. This hungry function could
-// consume data and return less samples than received.
+// If sample pressure is lower than threshold we change this data to "release data".
 static int
 pressure_read(struct tslib_module_info *info, struct ts_sample *input_samples, int nr)
 {
