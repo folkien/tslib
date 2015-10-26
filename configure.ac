@@ -56,6 +56,7 @@ TSLIB_CHECK_MODULE([linear-h2200], [yes], [Enable building of linearizing filter
 TSLIB_CHECK_MODULE([variance], [yes], [Enable building of variance filter])
 TSLIB_CHECK_MODULE([pthres], [yes], [Enable building of pthres filter])
 TSLIB_CHECK_MODULE([pressure], [yes], [Enable building of pressure-threshold filter])
+TSLIB_CHECK_MODULE([iir], [yes], [Enable building of iir filter])
 
 # hardware access modules
 TSLIB_CHECK_MODULE([ucb1x00], [yes], [Enable building of ucb1x00 raw module (UCB1x00 support)])

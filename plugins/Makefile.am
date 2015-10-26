@@ -48,6 +48,12 @@ else
 PRESSURE_MODULE =
 endif
 
+if ENABLE_IIR_MODULE
+IIR_MODULE = iir.la
+else
+IIR_MODULE =
+endif
+
 if ENABLE_UCB1X00_MODULE
 UCB1X00_MODULE = ucb1x00.la
 else
@@ -133,6 +139,7 @@ pluginexec_LTLIBRARIES = \
 	$(VARIANCE_MODULE) \
 	$(PTHRES_MODULE) \
 	$(PRESSURE_MODULE) \
+	$(IIR_MODULE) \
 	$(UCB1X00_MODULE) \
 	$(CORGI_MODULE) \
 	$(COLLIE_MODULE) \
@@ -166,6 +173,10 @@ pthres_la_LIBADD	= $(top_builddir)/src/libts.la
 pressure_la_SOURCES	= pressure.c
 pressure_la_LDFLAGS	= -module $(LTVSN)
 pressure_la_LIBADD	= $(top_builddir)/src/libts.la
+
+iir_la_SOURCES	= iir.c
+iir_la_LDFLAGS	= -module $(LTVSN)
+iir_la_LIBADD	= $(top_builddir)/src/libts.la
 
 # hw access
 corgi_la_SOURCES	= corgi-raw.c

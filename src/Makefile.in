@@ -51,6 +51,7 @@ host_triplet = @host@
 @ENABLE_STATIC_VARIANCE_MODULE_TRUE@am__append_4 = $(top_srcdir)/plugins/variance.c
 @ENABLE_STATIC_PTHRES_MODULE_TRUE@am__append_5 = $(top_srcdir)/plugins/pthres.c
 @ENABLE_STATIC_PRESSURE_MODULE_TRUE@am__append_5 = $(top_srcdir)/plugins/pressure.c
+@ENABLE_STATIC_IIR_MODULE_TRUE@am__append_5 = $(top_srcdir)/plugins/iir.c
 @ENABLE_STATIC_UCB1X00_MODULE_TRUE@am__append_6 = $(top_srcdir)/plugins/ucb1x00-raw.c
 @ENABLE_STATIC_CORGI_MODULE_TRUE@am__append_7 = $(top_srcdir)/plugins/corgi-raw.c
 @ENABLE_STATIC_COLLIE_MODULE_TRUE@am__append_8 = $(top_srcdir)/plugins/collie-raw.c
@@ -116,6 +117,7 @@ am__libts_la_SOURCES_DIST = ts_attach.c ts_close.c ts_config.c \
 	$(top_srcdir)/plugins/variance.c \
 	$(top_srcdir)/plugins/pthres.c \
 	$(top_srcdir)/plugins/pressure.c \
+	$(top_srcdir)/plugins/iir.c \
 	$(top_srcdir)/plugins/ucb1x00-raw.c \
 	$(top_srcdir)/plugins/corgi-raw.c \
 	$(top_srcdir)/plugins/collie-raw.c \
@@ -139,6 +141,7 @@ am__libts_la_SOURCES_DIST = ts_attach.c ts_close.c ts_config.c \
 @ENABLE_STATIC_TATUNG_MODULE_TRUE@am__objects_12 = tatung-raw.lo
 @ENABLE_STATIC_INPUT_MODULE_TRUE@am__objects_13 = input-raw.lo
 @ENABLE_STATIC_PRESSURE_MODULE_TRUE@am__objects_14 = pressure.lo
+@ENABLE_STATIC_IIR_MODULE_TRUE@am__objects_15 = iir.lo
 am_libts_la_OBJECTS = ts_attach.lo ts_close.lo ts_config.lo \
 	ts_error.lo ts_fd.lo ts_load_module.lo ts_open.lo \
 	ts_parse_vars.lo ts_read.lo ts_read_raw.lo ts_option.lo \
@@ -397,6 +400,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mk712-raw.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/pthres.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/pressure.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/iir.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tatung-raw.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ts_attach.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ts_close.Plo@am__quote@
@@ -474,6 +478,13 @@ pressure.lo: $(top_srcdir)/plugins/pressure.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$(top_srcdir)/plugins/pressure.c' object='pressure.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o pressure.lo `test -f '$(top_srcdir)/plugins/pressure.c' || echo '$(srcdir)/'`$(top_srcdir)/plugins/pressure.c
+
+iir.lo: $(top_srcdir)/plugins/iir.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT iir.lo -MD -MP -MF $(DEPDIR)/iir.Tpo -c -o iir.lo `test -f '$(top_srcdir)/plugins/iir.c' || echo '$(srcdir)/'`$(top_srcdir)/plugins/iir.c
+@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/iir.Tpo $(DEPDIR)/iir.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$(top_srcdir)/plugins/iir.c' object='iir.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o iir.lo `test -f '$(top_srcdir)/plugins/iir.c' || echo '$(srcdir)/'`$(top_srcdir)/plugins/iir.c
 
 ucb1x00-raw.lo: $(top_srcdir)/plugins/ucb1x00-raw.c
 @am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ucb1x00-raw.lo -MD -MP -MF $(DEPDIR)/ucb1x00-raw.Tpo -c -o ucb1x00-raw.lo `test -f '$(top_srcdir)/plugins/ucb1x00-raw.c' || echo '$(srcdir)/'`$(top_srcdir)/plugins/ucb1x00-raw.c

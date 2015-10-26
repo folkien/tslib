@@ -196,6 +196,14 @@ pressure_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(pressure_la_LDFLAGS) $(LDFLAGS) -o $@
 @ENABLE_PRESSURE_MODULE_TRUE@am_pressure_la_rpath = -rpath \
 @ENABLE_PRESSURE_MODULE_TRUE@	$(pluginexecdir)
+iir_la_DEPENDENCIES = $(top_builddir)/src/libts.la
+am_iir_la_OBJECTS = iir.lo
+iir_la_OBJECTS = $(am_iir_la_OBJECTS)
+iir_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+	$(iir_la_LDFLAGS) $(LDFLAGS) -o $@
+@ENABLE_iir_MODULE_TRUE@am_iir_la_rpath = -rpath \
+@ENABLE_iir_MODULE_TRUE@	$(pluginexecdir)
 tatung_la_LIBADD =
 am_tatung_la_OBJECTS = tatung-raw.lo
 tatung_la_OBJECTS = $(am_tatung_la_OBJECTS)

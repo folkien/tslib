@@ -67,6 +67,9 @@ static const struct {
 #ifdef TSLIB_STATIC_PRESSURE_MODULE
 	{ "pressure", pressure_mod_init },
 #endif
+#ifdef TSLIB_STATIC_IIR_MODULE
+	{ "iir", iir_mod_init },
+#endif
 #ifdef TSLIB_STATIC_TATUNG_MODULE
 	{ "tatung", tatung_mod_init },
 #endif
