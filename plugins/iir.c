@@ -131,8 +131,8 @@ static int threshold_vars(struct tslib_module_info *inf, char *str, void *data)
 
 static const struct tslib_vars iir_vars[] =
 {
-	{ "A0",	(void *)0, threshold_vars }
-	{ "B0",	(void *)1, threshold_vars }
+	{ "A0",	(void *)0, threshold_vars },
+	{ "B0",	(void *)1, threshold_vars },
 	{ "B1",	(void *)2, threshold_vars }
 };
 
